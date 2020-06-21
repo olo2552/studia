@@ -1,0 +1,3 @@
+interface ICopiable {
+    void Copy();
+}
