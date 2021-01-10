@@ -1,6 +1,3 @@
-// Login: gdx142966
-// Nr albumu: 51266
-
 // Wariant = 51266 % 10 % 3 = 0
 // 0 - Wariant A – sortowanie bąbelkowe, sortowanie przez scalanie.
 
@@ -22,6 +19,7 @@ export const bubbleSort: SortingFunction = (array, comparator = chooseHigherComp
     return array;
 }
 
+// XD Co mogę powiedzieć, nie ten algortym dałem
 export const insertSort: SortingFunction = (array, comparator = chooseLowerComparator) => {
     for (let i = 1; i < array.length; i++) {
         const current = array[i];
@@ -34,4 +32,39 @@ export const insertSort: SortingFunction = (array, comparator = chooseLowerCompa
         array[j+1] = current;
     }
     return array;
+}
+
+function merge<T = number>(left: T[], right: T[], comparator = chooseHigherComparator): T[] {
+    let arr = []
+    // Break out of loop if any one of the array gets empty
+    while (left.length && right.length) {
+        // Pick the smaller among the smallest element of left and right sub arrays
+        if (comparator(left[0], right[0])) {
+            const leftElem = left.shift()
+            if (!!leftElem) {
+                arr.push(leftElem)
+            }
+        } else {
+            const rightElem = right.shift()
+            if (!!rightElem) {
+                arr.push(rightElem)
+            }
+        }
+    }
+
+    // Concatenating the leftover elements
+    // (in case we didn't go through the entire left or right array)
+    return [ ...arr, ...left, ...right ]
+}
+
+export function mergeSort<T=number>(array: T[]): T[] {
+    const half = array.length / 2
+
+    // Base case or terminating case
+    if(array.length < 2){
+        return array
+    }
+
+    const left = array.splice(0, half)
+    return merge(mergeSort(left),mergeSort(array))
 }

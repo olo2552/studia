@@ -3,6 +3,6 @@ export const measureTimeExecution = (functionToMeasure: Function, ...funcArgs: a
     functionToMeasure.call(null, ...funcArgs);
     const endingTime = performance.now();
 
-    return startingTime - endingTime;
+    return endingTime - startingTime;
 }
 

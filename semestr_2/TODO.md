@@ -8,7 +8,7 @@ Bazy Danych:
 Algorytmy i Struktury Danych:
 	- [x] Lab01
 	- [x] Lab02
-	- [ ] Lab03
+	- [x] Lab03
 	- [ ] Lab04
 
 Metody prowadzenia projektów:
