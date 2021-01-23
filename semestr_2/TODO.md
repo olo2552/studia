@@ -1,5 +1,6 @@
 SOP:
 	- [ ] Project
+		- [x] Find out you're fucked
 
 Bazy Danych:
 	- [ ] Project
@@ -9,7 +10,7 @@ Algorytmy i Struktury Danych:
 	- [x] Lab01
 	- [x] Lab02
 	- [x] Lab03
-	- [ ] Lab04
+	- [x] Lab04
 
 Metody prowadzenia projektów:
 	- [ ] Lista Tasków

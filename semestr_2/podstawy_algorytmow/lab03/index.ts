@@ -26,13 +26,13 @@ console.log({
 })
 
 
-console.log({
-    bubbleSortForTen,
-    bubbleSortForHundred,
-    bubbleSortForThousand,
-    bubbleSortForTenThousand,
-    bubbleSortForHundredThousand,
-})
+// console.log({
+//     bubbleSortForTen,
+//     bubbleSortForHundred,
+//     bubbleSortForThousand,
+//     bubbleSortForTenThousand,
+//     bubbleSortForHundredThousand,
+// })
 
 
 // bubble for 10 ~ 0
